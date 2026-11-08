@@ -16,7 +16,7 @@ GROQ_API_KEY = "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"
 GROQ_URL = "https://api.groq.com/openai/v1/chat/completions"
 
 # ✅ 100% Working & Stable Groq Models
-VISION_MODEL = "llama-3.2-11b-vision-preview"
+VISION_MODEL = "meta-llama/llama-4-scout-17b-16e-instruct"
 TEXT_MODEL = "openai/gpt-oss-120b"
 
 SYSTEM_PROMPT = """Aap ek bohot friendly, smart aur madadgar AI Assistant hain. Aapka naam "Master Ali AI" hai.
