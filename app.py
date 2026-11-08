@@ -8,16 +8,17 @@ from PIL import Image, ImageDraw
 app = Flask(__name__)
 
 # ============================================================
-#  YAHAN APNI NAYI GROQ API KEY PASTE KAREIN (Quotes ke andar)
+#  YAHAN APNI GROQ API KEY PASTE KAREIN (Quotes ke andar)
 # ============================================================
-GROQ_API_KEY = "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"
+GROQ_API_KEY = "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"
 # ============================================================
 
 GROQ_URL = "https://api.groq.com/openai/v1/chat/completions"
 
-TEXT_MODEL = "openai/gpt-oss-120b"
-VISION_MODEL = "meta-llama/llama-4-scout-17b-16e-instruct"
-# 🧠 AI Ki Memory (Aapki Saari Requirements)
+# ✅ 100% Working & Stable Groq Models
+TEXT_MODEL = "llama-3.3-70b-versatile"
+VISION_MODEL = "llama-3.2-90b-vision-preview"
+
 SYSTEM_PROMPT = """Aap ek bohot friendly, smart aur madadgar AI Assistant hain. Aapka naam "Master Ali AI" hai.
 Aap Urdu aur English dono mein baat karte hain aur hamesha khushmizaj andaz mein jawab dete hain.
 
@@ -59,7 +60,6 @@ def make_image_url(prompt):
     encoded = urllib.parse.quote(prompt + ", high quality, detailed, cinematic lighting")
     return f"https://image.pollinations.ai/prompt/{encoded}?width=768&height=768&nologo=true"
 
-# 🎨 UI Design (100% Fixed for Old Phones + History)
 HTML = """
 <!DOCTYPE html>
 <html>
@@ -162,7 +162,7 @@ function setMode(m) {
     if (m === 'image') { uploadedImageBase64 = null; document.getElementById('preview').style.display = 'none'; }
 }
 
-// Photo compress system (Error 400 fix)
+// 🚨 STRONG PHOTO COMPRESSOR (Error 400 Fix)
 function handleFile() {
     const file = document.getElementById('fileInput').files[0];
     if (!file) return;
@@ -171,7 +171,7 @@ function handleFile() {
         const img = new Image();
         img.onload = function() {
             const canvas = document.createElement('canvas');
-            const MAX_SIZE = 600; 
+            const MAX_SIZE = 500; // Photo ko 500px kar diya
             let width = img.width;
             let height = img.height;
             if (width > height) { if (width > MAX_SIZE) { height *= MAX_SIZE / width; width = MAX_SIZE; } } 
@@ -180,7 +180,7 @@ function handleFile() {
             canvas.height = height;
             const ctx = canvas.getContext('2d');
             ctx.drawImage(img, 0, 0, width, height);
-            const dataUrl = canvas.toDataURL('image/jpeg', 0.7);
+            const dataUrl = canvas.toDataURL('image/jpeg', 0.6); // Quality 60%
             uploadedImageBase64 = dataUrl.split(',')[1];
             const preview = document.getElementById('preview');
             preview.src = dataUrl;
