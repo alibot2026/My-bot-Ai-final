@@ -16,7 +16,7 @@ GROQ_API_KEY = "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"
 GROQ_URL = "https://api.groq.com/openai/v1/chat/completions"
 
 TEXT_MODEL = "openai/gpt-oss-120b"
-VISION_MODEL = "meta-llama/llama-4-scout-17b-16e-instruct""
+VISION_MODEL = "meta-llama/llama-4-scout-17b-16e-instruct"
 # 🧠 AI Ki Memory (Aapki Saari Requirements)
 SYSTEM_PROMPT = """Aap ek bohot friendly, smart aur madadgar AI Assistant hain. Aapka naam "Master Ali AI" hai.
 Aap Urdu aur English dono mein baat karte hain aur hamesha khushmizaj andaz mein jawab dete hain.
