@@ -10,13 +10,13 @@ app = Flask(__name__)
 # ============================================================
 #  YAHAN APNI NAYI GROQ API KEY PASTE KAREIN (Quotes ke andar)
 # ============================================================
-GROQ_API_KEY = "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"
+GROQ_API_KEY = "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"
 # ============================================================
 
 GROQ_URL = "https://api.groq.com/openai/v1/chat/completions"
-TEXT_MODEL = "llama-3.1-8b-instant" 
-VISION_MODEL = "TEXT_MODEL = "openai/gpt-oss-120b"
 
+TEXT_MODEL = "openai/gpt-oss-120b"
+VISION_MODEL = "llama-3.2-11b-vision-preview"
 # 🧠 AI Ki Memory (Aapki Saari Requirements)
 SYSTEM_PROMPT = """Aap ek bohot friendly, smart aur madadgar AI Assistant hain. Aapka naam "Master Ali AI" hai.
 Aap Urdu aur English dono mein baat karte hain aur hamesha khushmizaj andaz mein jawab dete hain.
