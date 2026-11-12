@@ -10,7 +10,7 @@ app = Flask(__name__)
 # ============================================================
 #  YAHAN APNI GROQ API KEY PASTE KAREIN (Quotes ke andar)
 # ============================================================
-GROQ_API_KEY = "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"
+GROQ_API_KEY = "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"
 # ============================================================
 
 GROQ_URL = "https://api.groq.com/openai/v1/chat/completions"
